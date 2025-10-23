@@ -1,1 +1,6 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+  <app-hero [data]="vm?.hero"></app-hero>
+
+  <div *ngIf="vm?.rows as rows">
+    <app-row *ngFor="let r of rows" [title]="r.title" [items]="r.items"></app-row>
+  </div>

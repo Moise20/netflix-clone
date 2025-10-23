@@ -1,1 +1,9 @@
-<p>search works!</p>
+<app-navbar/>
+  <section class="section">
+    <div class="container">
+      <input [(ngModel)]="q" (ngModelChange)="onSearch()" placeholder="Rechercher un titre..." class="search">
+      <div class="grid">
+        <app-card *ngFor="let m of results" [img]="m.poster" [title]="m.title" [subtitle]="(m.rating || 0) + '/10'"></app-card>
+      </div>
+    </div>
+  </section>
