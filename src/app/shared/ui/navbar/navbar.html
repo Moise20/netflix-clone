@@ -1,1 +1,21 @@
-<p>navbar works!</p>
+<header class="nav">
+  <div class="container row">
+    <a class="brand" routerLink="/home">NETFLIX<span class="dot">•</span>CLONE</a>
+
+    <nav class="links desktop">
+      <a routerLink="/home" routerLinkActive="active">Accueil</a>
+      <a routerLink="/browse" routerLinkActive="active">Parcourir</a>
+      <a routerLink="/search" routerLinkActive="active">Recherche</a>
+    </nav>
+
+    <button class="burger" (click)="toggle()">
+      <span [class.open]="isOpen"></span><span [class.open]="isOpen"></span><span [class.open]="isOpen"></span>
+    </button>
+  </div>
+
+  <nav class="links mobile" *ngIf="isOpen">
+    <a routerLink="/home" (click)="close()">Accueil</a>
+    <a routerLink="/browse" (click)="close()">Parcourir</a>
+    <a routerLink="/search" (click)="close()">Recherche</a>
+  </nav>
+</header>

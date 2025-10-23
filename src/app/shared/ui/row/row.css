@@ -1,0 +1,7 @@
+.row-sec{margin:16px 0}
+  .row-title{margin:0 0 8px}
+  .scroller{position:relative}
+  .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(140px,1fr);gap:12px;overflow-x:auto;scroll-behavior:smooth;padding:6px 36px}
+  .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:none;color:#fff;font-size:24px;width:32px;height:48px;cursor:pointer}
+  .prev{left:0}.next{right:0}
+  @media (min-width:768px){.rail{grid-auto-columns:minmax(180px,1fr)}}

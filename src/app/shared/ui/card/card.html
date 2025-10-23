@@ -1,1 +1,7 @@
-<p>card works!</p>
+<article class="card">
+    <img [src]="img" [alt]="title">
+    <div class="overlay">
+      <h4>{{title}}</h4>
+      <p *ngIf="subtitle">{{subtitle}}</p>
+    </div>
+  </article>

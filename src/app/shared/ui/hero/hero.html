@@ -1,1 +1,9 @@
-<p>hero works!</p>
+<header class="hero" [style.background-image]="'url(' + (data?.backdrop || '') + ')'">
+    <div class="shade">
+      <div class="container">
+        <h1>{{data?.title}}</h1>
+        <p class="muted">{{data?.overview}}</p>
+        <a *ngIf="data?.id" class="btn" [routerLink]="['/title', data!.id]">▶ Lire plus</a>
+      </div>
+    </div>
+  </header>

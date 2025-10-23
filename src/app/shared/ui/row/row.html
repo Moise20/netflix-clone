@@ -1,1 +1,12 @@
-<p>row works!</p>
+<section class="row-sec">
+    <div class="container">
+      <h3 class="row-title">{{title}}</h3>
+      <div class="scroller">
+        <button class="nav prev" (click)="scroll(-1)">‹</button>
+        <div class="rail" #rail>
+          <app-card *ngFor="let m of items" [img]="m.poster" [title]="m.title" [subtitle]="m.rating ? (m.rating+'/10') : ''"></app-card>
+        </div>
+        <button class="nav next" (click)="scroll(1)">›</button>
+      </div>
+    </div>
+  </section>
