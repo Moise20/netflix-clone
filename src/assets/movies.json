@@ -1,0 +1,25 @@
+{
+  "hero": {
+    "id": 100,
+    "title": "Night Runner",
+    "overview": "Un coureur traqué dans une ville futuriste...",
+    "backdrop": "/assets/backdrops/hero1.png"
+  },
+  "rows": [
+    {
+      "id": "trending",
+      "title": "Tendances",
+      "items": [
+        { "id": 1, "title": "Pulse", "overview": "Thriller futuriste", "poster": "/assets/posters/p1.png", "rating": 7.8, "genres":["Sci-Fi","Thriller"] },
+        { "id": 2, "title": "Red Steel", "overview": "Action intense", "poster": "/assets/posters/p2.png", "rating": 7.1, "genres":["Action"] }
+      ]
+    },
+    {
+      "id": "action",
+      "title": "Action",
+      "items": [
+        { "id": 3, "title": "Iron Path", "overview": "Mercenaires en mission", "poster": "/assets/posters/p3.png", "rating": 6.9, "genres":["Action"] }
+      ]
+    }
+  ]
+}
