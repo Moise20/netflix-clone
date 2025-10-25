@@ -2,7 +2,7 @@
   "hero": {
     "id": 100,
     "title": "Night Runner",
-    "overview": "Un coureur traqué dans une ville futuriste...",
+    "overview": "Traqué par une organisation inconnue, un jeune homme doit survivre dans les rues d'une mégalopole futuriste où chaque pas peut être le dernier.",
     "backdrop": "/assets/backdrops/hero1.png"
   },
   "rows": [
@@ -10,15 +10,21 @@
       "id": "trending",
       "title": "Tendances",
       "items": [
-        { "id": 1, "title": "Pulse", "overview": "Thriller futuriste", "poster": "/assets/posters/p1.png", "rating": 7.8, "genres":["Sci-Fi","Thriller"] },
-        { "id": 2, "title": "Red Steel", "overview": "Action intense", "poster": "/assets/posters/p2.png", "rating": 7.1, "genres":["Action"] }
+        { "id": 1, "title": "Pulse", "overview": "Un hacker infiltre un réseau expérimental et déclenche une menace qui dépasse la réalité.", "poster": "/assets/posters/p1.png", "rating": 7.8 },
+        { "id": 2, "title": "Red Steel", "overview": "Un ancien soldat doit choisir entre vengeance et justice lorsqu’un cartel frappe sa famille.", "poster": "/assets/posters/p2.png", "rating": 7.1 },
+        { "id": 3, "title": "Iron Path", "overview": "Une équipe de mercenaires traverse un territoire hostile pour récupérer un prisonnier clé.", "poster": "/assets/posters/p3.png", "rating": 6.9 },
+        { "id": 4, "title": "City Ghost", "overview": "Dans une ville connectée, un homme découvre qu’il est effacé des systèmes… et bientôt de la mémoire des gens.", "poster": "/assets/posters/p4.png", "rating": 8.2 },
+        { "id": 5, "title": "Rogue Line", "overview": "Une opération secrète tourne mal et un agent solitaire devient la cible des deux camps.", "poster": "/assets/posters/p5.png", "rating": 7.4 },
+        { "id": 6, "title": "Blackout", "overview": "Une coupure mondiale plonge la planète dans le chaos et révèle la véritable nature de l’humanité.", "poster": "/assets/posters/p6.png", "rating": 8.0 }
       ]
     },
     {
       "id": "action",
       "title": "Action",
       "items": [
-        { "id": 3, "title": "Iron Path", "overview": "Mercenaires en mission", "poster": "/assets/posters/p3.png", "rating": 6.9, "genres":["Action"] }
+        { "id": 7, "title": "Vengeance", "overview": "Traqué par son passé, un homme veut faire justice lui-même après une trahison mortelle.", "poster": "/assets/posters/p7.png", "rating": 7.6 },
+        { "id": 8, "title": "Warland", "overview": "Aux frontières d’un pays ravagé par la guerre, une section d’élite affronte l’impensable.", "poster": "/assets/posters/p8.png", "rating": 7.0 },
+        { "id": 9, "title": "Brutal Zone", "overview": "Un policier infiltré doit survivre dans un quartier contrôlé par un chef criminel impitoyable.", "poster": "/assets/posters/p9.png", "rating": 6.7 }
       ]
     }
   ]

@@ -1,7 +1,50 @@
-.row-sec{margin:16px 0}
-  .row-title{margin:0 0 8px}
-  .scroller{position:relative}
-  .rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(140px,1fr);gap:12px;overflow-x:auto;scroll-behavior:smooth;padding:6px 36px}
-  .nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.6);border:none;color:#fff;font-size:24px;width:32px;height:48px;cursor:pointer}
-  .prev{left:0}.next{right:0}
-  @media (min-width:768px){.rail{grid-auto-columns:minmax(180px,1fr)}}
+.row-sec { margin: 20px 0; }
+
+.row-title {
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.scroller { position: relative; overflow: hidden; } /* masque le hors-cadre */
+
+.rail {
+  display: flex;
+  gap: 12px;                 /* <— garder en phase avec TS */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 6px 36px;
+  scrollbar-width: none;     /* Firefox */
+}
+.rail::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+/* Taille fixe des cartes (ne rétrécissent pas) */
+.rail > app-card { flex: 0 0 180px; }      /* mobile/tablette */
+
+@media (min-width: 1024px) {
+  .rail > app-card { flex: 0 0 320px; }    /* desktop “medium” */
+}
+
+@media (min-width: 1440px) {
+  .rail > app-card { flex: 0 0 380px; }    /* grand écran */
+}
+
+/* Boutons */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,.6);
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  width: 36px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 10;                /* au-dessus du rail */
+  transition: background .2s;
+}
+.nav:hover { background: rgba(0,0,0,.9); }
+
+.prev { left: 0; }
+.next { right: 0; }

@@ -13,6 +13,21 @@ import { Movie } from '../../../core/models/movie';
 export class Row {
 @Input() title = '';
   @Input() items: Movie[] = [];
-  @ViewChild('rail') rail!: ElementRef<HTMLDivElement>;
-  scroll(dir: 1|-1) { this.rail.nativeElement.scrollBy({left: dir*300, behavior:'smooth'}); }
+
+  @ViewChild('rail', { static: true })
+  rail!: ElementRef<HTMLDivElement>;
+
+  /** Scroll d’un “pas” = largeur d’une carte + gap */
+  scroll(dir: 1 | -1) {
+    const el = this.rail?.nativeElement;
+    if (!el) return;
+
+    const card = el.querySelector('app-card') as HTMLElement | null;
+    const gap = 12; // même valeur que dans le CSS
+    const step = card
+      ? Math.ceil(card.getBoundingClientRect().width + gap)
+      : 320;
+
+    el.scrollBy({ left: dir * step, behavior: 'smooth' });
+  } 
 }
