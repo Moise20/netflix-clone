@@ -1,1 +1,10 @@
-<p>browse works!</p>
+<app-navbar></app-navbar>
+
+
+
+<div *ngIf="rows.length">
+  <app-row *ngFor="let r of rows"
+           [title]="r.title"
+           [items]="r.items">
+  </app-row>
+</div>
